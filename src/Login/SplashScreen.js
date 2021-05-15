@@ -12,7 +12,7 @@ class SplashScreen extends React.Component{
              <div style={{backgroundImage:`url("${euro}")`, backgroundColor:'#17036e' ,position: "fixed", top: 0, left: 0, bottom: 0,right: 0, overflow: "auto", backgroundSize: 'cover'}}>
             <Container component='main' maxWidth='xs' fixed >
             <CssBaseline />
-                <Button variant="contained" color="primary" size= "medium" style={{paddingLeft:"100px",paddingRight:"100px" ,position:"absolute", marginLeft:"78px", marginTop:"883px" }} href="/vote">Vote</Button>
+                <Button variant="contained" color="primary" size= "medium" style={{paddingLeft:"100px",paddingRight:"100px" , marginLeft:"70px", marginTop:"920px" }} href="/vote">Vote</Button>
            </Container>
             </div>
         )
