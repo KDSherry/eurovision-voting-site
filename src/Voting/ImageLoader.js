@@ -29,6 +29,15 @@ import Sweden from './../images/flags/Sweden.png';
 import Netherlands from './../images/flags/Netherlands.png';
 import Turkey from './../images/flags/Turkey.png';
 import Ukraine from './../images/flags/Ukraine.png';
+import UnitedKingdom from './../images/flags/UnitedKingdom.png';
+import Switzerland from './../images/flags/Switzerland.png';
+import Macedonia from './../images/flags/Macedonia.png';
+import Bulgaria from './../images/flags/Bulgaria.png';
+import Croatia from './../images/flags/Croatia.png';
+import Estonia from './../images/flags/Estonia.png';
+import Israel from './../images/flags/Israel.png';
+import Romania from './../images/flags/Romania.png';
+import Albania from './../images/flags/Albania.png';
 
 
 
@@ -71,6 +80,15 @@ export default function NameToImport(name){
         case "The Netherlands" : return (<img src={Netherlands} alt={name}  style={flagStyle}/>)
         case "Turkey" : return (<img src={Turkey} alt={name}  style={flagStyle}/>)
         case "Ukraine" : return (<img src={Ukraine} alt={name}  style={flagStyle}/>)
+        case "Albania" : return (<img src={Albania} alt={name}  style={flagStyle}/>)
+        case "Bulgaria" : return (<img src={Bulgaria} alt={name}  style={flagStyle}/>)
+        case "Croatia" : return (<img src={Croatia} alt={name}  style={flagStyle}/>)
+        case "Estonia" : return (<img src={Estonia} alt={name}  style={flagStyle}/>)
+        case "Israel" : return (<img src={Israel} alt={name}  style={flagStyle}/>)
+        case "North Macedonia" : return (<img src={Macedonia} alt={name}  style={flagStyle}/>)
+        case "Romania" : return (<img src={Romania} alt={name}  style={flagStyle}/>)
+        case "Switzerland" : return (<img src={Switzerland} alt={name}  style={flagStyle}/>)
+        case "United Kingdom" : return (<img src={UnitedKingdom} alt={name}  style={flagStyle}/>)
         default : return(<img src="" alt="" style={flagStyle}/>)
     }
 }

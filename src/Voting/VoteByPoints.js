@@ -63,13 +63,13 @@ class VoteByPoints extends React.Component{
             <Grid item xs={12} key={score}>
                 <Paper style={{textAlign: "center"}}>  
                     <Grid container maxwidth='sm'>
-                        {/* <Grid item xs ={2}>{NameToImport(name)}</Grid>                 */}
+                        <Grid item xs ={2}>{NameToImport(name)}</Grid>                
                         
                         <Grid item xs ={3} style={{paddingTop:"10px", fontSize:"20px"}}>{score}</Grid>
                         <Grid item xs ={9} style={{paddingTop:"12px", fontSize:"18px"}}>{this.returnSelectCountries(score.toString())}</Grid>
                         
-                        {/* <Grid item xs ={2} style={{paddingTop:"10px", fontSize:"20px"}}>{score}</Grid> */}
-                        {/* <Grid item xs ={2} >{this.returnSelectOptions(name)}</Grid> */}
+                        <Grid item xs ={2} style={{paddingTop:"10px", fontSize:"20px"}}>{score}</Grid>
+                        <Grid item xs ={2} >{this.returnSelectOptions(name)}</Grid>
                     </Grid>    
                 </Paper>
             </Grid>

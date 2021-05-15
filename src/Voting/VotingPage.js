@@ -37,36 +37,28 @@ class VotingPage extends React.Component{
                 {"score" :12, "country":""}
             ],
             votes:[
-                {"country":"Belgium" , "virtualOrder": 15 ,"alphabeticOrder": 7 ,"performer": "Amy Fox"},
-                {"country":"Hungary", "virtualOrder": 16 ,"alphabeticOrder": 23 ,"performer": "Dominic"},
-                {"country": "Armenia", "virtualOrder": 1 ,"alphabeticOrder": 1 ,"performer": "Helen Stone"},
-                {"country":"Germany", "virtualOrder": 17 ,"alphabeticOrder": 19 ,"performer": "Kevin Hand"},
-                {"country":"Malta", "virtualOrder": 3 ,"alphabeticOrder": 6 ,"performer": "Sam Baker"},
-                {"country":"Czech Republic" , "virtualOrder": 18 ,"alphabeticOrder": 11 ,"performer": "Adam"},
-                {"country":"Italy", "virtualOrder": 4 ,"alphabeticOrder": 2 ,"performer": "Abbie"},
-                {"country":"Slovenia", "virtualOrder": 19 ,"alphabeticOrder": 20 ,"performer": "Kieran Sherry"},
-                {"country":"Greece", "virtualOrder": 5 ,"alphabeticOrder": 21 ,"performer": "Alice & Adam"},
-                {"country":"Ukraine", "virtualOrder": 20 ,"alphabeticOrder": 28 ,"performer": "Helen & Steve"},
-                {"country":"The Netherlands", "virtualOrder": 6 ,"alphabeticOrder": 24 ,"performer": "Keri"},
-                // {"country":"Lithuania", "virtualOrder": 12 ,"alphabeticOrder": 4 ,"performer": "Simon & Rosie"},
-                {"country":"Ireland", "virtualOrder": 7 ,"alphabeticOrder": 27 ,"performer": "Bethany Pearson"},
-                {"country":"Finland", "virtualOrder": 12 ,"alphabeticOrder": 15 ,"performer": "Alice Moore"},
-                {"country":"Portugal", "virtualOrder": 8 ,"alphabeticOrder": 14 ,"performer": "Alex Presland"},
-                {"country":"Latvia", "virtualOrder": 22 ,"alphabeticOrder": 4 ,"performer": "Sarah Lewney"},
-                {"country":"Moldova", "virtualOrder": 10 ,"alphabeticOrder": 8 ,"performer": "Katie & Sam"},
-                {"country":"Belarus" , "virtualOrder": 2 ,"alphabeticOrder": 5 ,"performer": "Sarah Dabbs"},
-                {"country":"Austria" , "virtualOrder": 21 ,"alphabeticOrder": 3 ,"performer": "Sarah & Andy"},
-                {"country":"France", "virtualOrder": 24 ,"alphabeticOrder": 17 ,"performer": "John Conliffe"},
-                {"country":"Russia", "virtualOrder": 11 ,"alphabeticOrder": 16 ,"performer": "Dave Powell"},
-                {"country":"Serbia", "virtualOrder": 25 ,"alphabeticOrder": 18 ,"performer": "Si Ro O & James"},
-                // {"country":"Slovakia", "virtualOrder": 23 ,"alphabeticOrder": 20 ,"performer": "Sarah Baldwin"},
-                {"country":"Turkey", "virtualOrder": 26 ,"alphabeticOrder": 26 ,"performer": "Emma Plant"},
-                {"country":"Poland", "virtualOrder": 13 ,"alphabeticOrder": 12 ,"performer": "Emily Banham"},
-                {"country":"Norway", "virtualOrder": 27 ,"alphabeticOrder": 10 ,"performer": "Becky & Will"},
-                {"country":"Sweden", "virtualOrder": 14 ,"alphabeticOrder": 22 ,"performer": "Dan Gibbons"},
-                {"country":"Iceland", "virtualOrder": 9 ,"alphabeticOrder": 25 ,"performer": "Malcolm"},
-                {"country":"Cyprus"  , "virtualOrder": 23 ,"alphabeticOrder": 9 ,"performer": "Sam Turner"},
-                {"country":"Denmark", "virtualOrder": 28 ,"alphabeticOrder": 13 ,"performer": "Mikey & Lauren"}
+                {"country":"Albania", "virtualOrder": 13 ,"alphabeticOrder": 1 ,"performer": "Malcolm"},
+                {"country":"Austria" , "virtualOrder": 1 ,"alphabeticOrder": 3 ,"performer": "Alex & Emma"},
+                {"country":"Bulgaria" , "virtualOrder": 10 ,"alphabeticOrder": 5 ,"performer": "David Guzman"},
+                {"country":"Croatia" , "virtualOrder": 2 ,"alphabeticOrder": 7 ,"performer": "Banham & Dabbs"},
+                {"country":"Cyprus"  , "virtualOrder": 17 ,"alphabeticOrder": 9 ,"performer": "James & Sirio"},
+                {"country":"Denmark", "virtualOrder": 19 ,"alphabeticOrder": 11 ,"performer": "Adam Harris"},
+                {"country":"Estonia" , "virtualOrder": 21 ,"alphabeticOrder": 13 ,"performer": "Sam Baker"},
+                {"country":"Finland", "virtualOrder": 18 ,"alphabeticOrder": 15 ,"performer": "Mikey & Lauren"},
+                {"country":"France", "virtualOrder": 16 ,"alphabeticOrder": 17 ,"performer": "Kieran Sherry"},
+                {"country":"Germany", "virtualOrder": 9 ,"alphabeticOrder": 19 ,"performer": "Natasha"},
+                {"country":"Ireland", "virtualOrder": 12 ,"alphabeticOrder": 21 ,"performer": "Alice & Adam"},
+                {"country":"Israel", "virtualOrder": 20 ,"alphabeticOrder": 2 ,"performer": "Angus Law"},
+                {"country":"Italy", "virtualOrder": 5 ,"alphabeticOrder": 4 ,"performer": "Sarah Baldwin"},
+                {"country":"Latvia", "virtualOrder": 8 ,"alphabeticOrder": 6 ,"performer": "Dave & Ruth"},
+                {"country":"North Macedonia", "virtualOrder": 6 ,"alphabeticOrder": 8 ,"performer": "Helen & Huw"},
+                {"country":"Portugal", "virtualOrder": 3 ,"alphabeticOrder": 10 ,"performer": "Dan Gibbons"},
+                {"country":"Romania", "virtualOrder": 15 ,"alphabeticOrder": 12 ,"performer": "Oliver Broad"},
+                {"country":"Sweden", "virtualOrder": 11 ,"alphabeticOrder": 14 ,"performer": "The Lofts"},
+                {"country":"Switzerland", "virtualOrder": 4 ,"alphabeticOrder": 16 ,"performer": "Matt & Niki"},
+                {"country":"Ukraine", "virtualOrder": 14 ,"alphabeticOrder": 18 ,"performer": "Kevin"},
+                {"country":"United Kingdom", "virtualOrder": 7 ,"alphabeticOrder": 20 ,"performer": "Abbie Webster"}
+
             ],
             voteConfirmation:false,
             identifier:"",        
@@ -204,7 +196,7 @@ class VotingPage extends React.Component{
     }
     submitVotesButton = () =>{
         console.log(this.state.scores)
-        // this.setVotingConfirmationTrue()
+        this.setVotingConfirmationTrue()
     }
    
     render(){
