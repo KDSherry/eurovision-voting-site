@@ -14,7 +14,7 @@ import VoteByName from './VoteByName'
 // import VoteByPoints from './VoteByPoints'
 import euro from '../images/BACKDROP.jpg'
 
-import Title from '../images/Eurovision_generic_white.png'
+import Title from '../images/Youre_A_Vision_logo_white.png'
 import VotingConfirmation from './VotingConfirmation'
 import api from '../api'
 
