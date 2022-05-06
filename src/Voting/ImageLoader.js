@@ -38,6 +38,8 @@ import Estonia from './../images/flags/Estonia.png';
 import Israel from './../images/flags/Israel.png';
 import Romania from './../images/flags/Romania.png';
 import Albania from './../images/flags/Albania.png';
+import Montenegro from './../images/flags/Montenegro.png';
+import Georgia from './../images/flags/Georgia.png';
 
 
 
@@ -89,6 +91,8 @@ export default function NameToImport(name){
         case "Romania" : return (<img src={Romania} alt={name}  style={flagStyle}/>)
         case "Switzerland" : return (<img src={Switzerland} alt={name}  style={flagStyle}/>)
         case "United Kingdom" : return (<img src={UnitedKingdom} alt={name}  style={flagStyle}/>)
+        case "Montenegro" : return (<img src={Montenegro} alt={name}  style={flagStyle}/>)
+        case "Georgia" : return (<img src={Georgia} alt={name}  style={flagStyle}/>)
         default : return(<img src="" alt="" style={flagStyle}/>)
     }
 }

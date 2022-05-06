@@ -38,26 +38,20 @@ class VotingPage extends React.Component{
             ],
             votes:[
                 {"country":"Albania", "virtualOrder": 13 ,"alphabeticOrder": 1 ,"performer": "Malcolm"},
-                {"country":"Austria" , "virtualOrder": 1 ,"alphabeticOrder": 3 ,"performer": "Alex & Emma"},
-                {"country":"Bulgaria" , "virtualOrder": 10 ,"alphabeticOrder": 5 ,"performer": "David Guzman"},
-                {"country":"Croatia" , "virtualOrder": 2 ,"alphabeticOrder": 7 ,"performer": "Banham & Dabbs"},
-                {"country":"Cyprus"  , "virtualOrder": 17 ,"alphabeticOrder": 9 ,"performer": "James & Sirio"},
-                {"country":"Denmark", "virtualOrder": 19 ,"alphabeticOrder": 11 ,"performer": "Adam Harris"},
-                {"country":"Estonia" , "virtualOrder": 21 ,"alphabeticOrder": 13 ,"performer": "Sam Baker"},
-                {"country":"Finland", "virtualOrder": 18 ,"alphabeticOrder": 15 ,"performer": "Mikey & Lauren"},
-                {"country":"France", "virtualOrder": 16 ,"alphabeticOrder": 17 ,"performer": "Kieran Sherry"},
-                {"country":"Germany", "virtualOrder": 9 ,"alphabeticOrder": 19 ,"performer": "Natasha"},
-                {"country":"Ireland", "virtualOrder": 12 ,"alphabeticOrder": 21 ,"performer": "Alice & Adam"},
-                {"country":"Israel", "virtualOrder": 20 ,"alphabeticOrder": 2 ,"performer": "Angus Law"},
-                {"country":"Italy", "virtualOrder": 5 ,"alphabeticOrder": 4 ,"performer": "Sarah Baldwin"},
-                {"country":"Latvia", "virtualOrder": 8 ,"alphabeticOrder": 6 ,"performer": "Dave & Ruth"},
-                {"country":"North Macedonia", "virtualOrder": 6 ,"alphabeticOrder": 8 ,"performer": "Helen & Huw"},
-                {"country":"Portugal", "virtualOrder": 3 ,"alphabeticOrder": 10 ,"performer": "Dan Gibbons"},
-                {"country":"Romania", "virtualOrder": 15 ,"alphabeticOrder": 12 ,"performer": "Oliver Broad"},
-                {"country":"Sweden", "virtualOrder": 11 ,"alphabeticOrder": 14 ,"performer": "The Lofts"},
-                {"country":"Switzerland", "virtualOrder": 4 ,"alphabeticOrder": 16 ,"performer": "Matt & Niki"},
-                {"country":"Ukraine", "virtualOrder": 14 ,"alphabeticOrder": 18 ,"performer": "Kevin"},
-                {"country":"United Kingdom", "virtualOrder": 7 ,"alphabeticOrder": 20 ,"performer": "Abbie Webster"}
+                {"country":"Armenia" , "virtualOrder": 2 ,"alphabeticOrder": 3 ,"performer": "Banham & Dabbs"},
+                {"country":"Austria" , "virtualOrder": 1 ,"alphabeticOrder": 5 ,"performer": "Alex & Emma"},
+                {"country":"Bulgaria" , "virtualOrder": 10 ,"alphabeticOrder": 7 ,"performer": "David Guzman"},
+                {"country":"Estonia" , "virtualOrder": 21 ,"alphabeticOrder": 9 ,"performer": "Sam Baker"},
+                {"country":"France", "virtualOrder": 16 ,"alphabeticOrder": 11 ,"performer": "Kieran Sherry"},
+                {"country":"Georgia"  , "virtualOrder": 17 ,"alphabeticOrder": 13 ,"performer": "James & Sirio"},
+                {"country":"Germany", "virtualOrder": 9 ,"alphabeticOrder": 15 ,"performer": "Natasha"},
+                {"country":"Italy", "virtualOrder": 5 ,"alphabeticOrder": 2 ,"performer": "Sarah Baldwin"},
+                {"country":"Montenegro", "virtualOrder": 19 ,"alphabeticOrder": 4 ,"performer": "Adam Harris"},
+                {"country":"Slovenia", "virtualOrder": 18 ,"alphabeticOrder": 6 ,"performer": "Mikey & Lauren"},
+                {"country":"Sweden", "virtualOrder": 11 ,"alphabeticOrder": 8 ,"performer": "The Lofts"},
+                {"country":"Switzerland", "virtualOrder": 4 ,"alphabeticOrder": 10 ,"performer": "Matt & Niki"},
+                {"country":"Ukraine", "virtualOrder": 14 ,"alphabeticOrder": 12 ,"performer": "Kevin"},
+                {"country":"United Kingdom", "virtualOrder": 7 ,"alphabeticOrder": 14 ,"performer": "Abbie Webster"}
 
             ],
             voteConfirmation:false,
@@ -141,39 +135,39 @@ class VotingPage extends React.Component{
     //async
     handleVote = async () => {
         
-        // this.setPost()
-        //let scores = this.state.scores
-        //let payload={}
-        // for (let i =0; i< scores.length; i++)
-        // {
-        //     switch(scores[i].score){
-        //         case 1 : this.setState({one:scores[i].country});break;
-        //         case 2 : this.setState({two:scores[i].country});break;
-        //         case 3 : this.setState({three:scores[i].country});break;
-        //         case 4 : this.setState({four:scores[i].country});break;
-        //         case 5 : this.setState({five:scores[i].country});break;
-        //         case 6 : this.setState({six:scores[i].country});break;
-        //         case 7 : this.setState({seven:scores[i].country});break;
-        //         case 8 : this.setState({eight:scores[i].country});break;
-        //         case 10 : this.setState({ten:scores[i].country});break;
-        //         case 12 : this.setState({twelve:scores[i].country});break;
-        //         default: console.log("error")
-        //     }
+        this.setPost()
+        let scores = this.state.scores
+        let payload={}
+        for (let i =0; i< scores.length; i++)
+        {
+            switch(scores[i].score){
+                case 1 : this.setState({one:scores[i].country});break;
+                case 2 : this.setState({two:scores[i].country});break;
+                case 3 : this.setState({three:scores[i].country});break;
+                case 4 : this.setState({four:scores[i].country});break;
+                case 5 : this.setState({five:scores[i].country});break;
+                case 6 : this.setState({six:scores[i].country});break;
+                case 7 : this.setState({seven:scores[i].country});break;
+                case 8 : this.setState({eight:scores[i].country});break;
+                case 10 : this.setState({ten:scores[i].country});break;
+                case 12 : this.setState({twelve:scores[i].country});break;
+                default: console.log("error")
+            }
             
-        // }
-        let payload = {
-            "identifier": this.state.identifier,
-            "1": this.state.one,
-            "2":this.state.two,
-            "3":this.state.three,
-            "4":this.state.four,
-            "5":this.state.five,
-            "6":this.state.six,
-            "7":this.state.seven,
-            "8":this.state.eight,
-            "10":this.state.ten,
-            "12":this.state.twelve,
-        }  
+        }
+        // let payload = {
+        //     "identifier": this.state.identifier,
+        //     "1": this.state.one,
+        //     "2":this.state.two,
+        //     "3":this.state.three,
+        //     "4":this.state.four,
+        //     "5":this.state.five,
+        //     "6":this.state.six,
+        //     "7":this.state.seven,
+        //     "8":this.state.eight,
+        //     "10":this.state.ten,
+        //     "12":this.state.twelve,
+        // }  
         
         setTimeout(async function(){
             await api.insertVote(payload).then(res=> {

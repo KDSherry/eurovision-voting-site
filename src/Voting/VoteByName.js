@@ -4,6 +4,7 @@ import Paper from '@material-ui/core/Paper';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 import NameToImport from './ImageLoader'
+import { TextField } from '@material-ui/core';
 
 class VoteByName extends React.Component{
    
@@ -46,7 +47,7 @@ class VoteByName extends React.Component{
                         <Grid item xs ={2}>{NameToImport(name)}</Grid>                
                         <Grid item xs ={4} style={{paddingTop:"10px", fontSize:"20px"}}>{name}</Grid>
                         <Grid item xs ={4} style={{paddingTop:"12px", fontSize:"18px"}}>{performer}</Grid>
-                        <Grid item xs ={2} >{selectOptions}</Grid>
+                        <Grid item xs ={2} ><TextField /></Grid>
                     </Grid>    
                 </Paper>
             </Grid>
