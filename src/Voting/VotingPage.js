@@ -55,7 +55,7 @@ class VotingPage extends React.Component{
 
             ],
             voteConfirmation:false,
-            identifier:"",        
+            identifier:"voter",        
             one:"",
             two:"",
             three:"",
@@ -131,44 +131,78 @@ class VotingPage extends React.Component{
     toggleVotes = ()=> {
         this.setState({votesSubmitted:true})
     }
-
+    getScore = (country) => {
+        if (country === this.state.one){
+           return 1;
+        }
+        if (country === this.state.two){
+            return 2;
+        }
+        if (country === this.state.three){
+            return 3;
+        }
+        if (country === this.state.four){
+            return 4;
+        }
+        if (country === this.state.five){
+            return 5;
+        }
+        if (country === this.state.six){
+            return 6;
+        }
+        if (country === this.state.eight){
+            return 8;
+        }
+        if (country === this.state.ten){
+            return 10;
+        }
+        if (country === this.state.twelve){
+            return 12;
+        }
+        return 0;            
+    }
     //async
     handleVote = async () => {
         
-        this.setPost()
-        let scores = this.state.scores
-        let payload={}
-        for (let i =0; i< scores.length; i++)
-        {
-            switch(scores[i].score){
-                case 1 : this.setState({one:scores[i].country});break;
-                case 2 : this.setState({two:scores[i].country});break;
-                case 3 : this.setState({three:scores[i].country});break;
-                case 4 : this.setState({four:scores[i].country});break;
-                case 5 : this.setState({five:scores[i].country});break;
-                case 6 : this.setState({six:scores[i].country});break;
-                case 7 : this.setState({seven:scores[i].country});break;
-                case 8 : this.setState({eight:scores[i].country});break;
-                case 10 : this.setState({ten:scores[i].country});break;
-                case 12 : this.setState({twelve:scores[i].country});break;
-                default: console.log("error")
-            }
-            
-        }
-        // let payload = {
-        //     "identifier": this.state.identifier,
-        //     "1": this.state.one,
-        //     "2":this.state.two,
-        //     "3":this.state.three,
-        //     "4":this.state.four,
-        //     "5":this.state.five,
-        //     "6":this.state.six,
-        //     "7":this.state.seven,
-        //     "8":this.state.eight,
-        //     "10":this.state.ten,
-        //     "12":this.state.twelve,
-        // }  
+        // this.setPost()
+        // let scores = this.state.scores
+        // let payload={}
+        // for (let i =0; i< scores.length; i++)
+        // {
+        //     switch(scores[i].score){
+        //         case 1 : this.setState({one:scores[i].country});break;
+        //         case 2 : this.setState({two:scores[i].country});break;
+        //         case 3 : this.setState({three:scores[i].country});break;
+        //         case 4 : this.setState({four:scores[i].country});break;
+        //         case 5 : this.setState({five:scores[i].country});break;
+        //         case 6 : this.setState({six:scores[i].country});break;
+        //         case 7 : this.setState({seven:scores[i].country});break;
+        //         case 8 : this.setState({eight:scores[i].country});break;
+        //         case 10 : this.setState({ten:scores[i].country});break;
+        //         case 12 : this.setState({twelve:scores[i].country});break;
+        //         default: console.log("error")
+        //     }
         
+        // }
+        let payload = {
+            "voter": this.state.identifier,
+            "Albania": this.getScore("Albania"),
+		    "Armenia": this.getScore("Armenia"),
+		    "Austria": this.getScore("Austria"),
+		    "Bulgaria": this.getScore("Bulgaria"),
+		    "Estonia": this.getScore("Estonia"),
+		    "France": this.getScore("France"),
+		    "Georgia":this.getScore("Georgia"),
+		    "Germany": this.getScore("Germany"),
+		    "Italy": this.getScore("Italy"),
+		    "Montenegro": this.getScore("Montenegro"),
+		    "Slovenia":this.getScore("Slovenia"),
+		    "Sweden": this.getScore("Sweden"),
+		    "Switzerland": this.getScore("Switzerland"),
+		    "Ukraine": this.getScore("Ukraine"),
+		    "UnitedKingdom": this.getScore("UnitedKingdom"),
+        }
+
         setTimeout(async function(){
             await api.insertVote(payload).then(res=> {
                 window.alert('Vote Submitted Successfully!')

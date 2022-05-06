@@ -7,6 +7,72 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Grid from '@material-ui/core/Grid';
 
+const peopleIdentifier = [
+{
+    value: 'voter',
+    label: 'Spectator'
+},
+{
+    value: 'Albania',
+    label: 'Albania'
+},
+{
+    value: 'Armenia',
+    label: 'Armenia'
+},
+{
+    value: 'Austria',
+    label: 'Austria'
+},
+{
+    value: 'Bulgaria',
+    label: 'Bulgaria'
+},
+{
+    value: 'Estonia',
+    label: 'Estonia'
+},
+{
+    value: 'France',
+    label: 'France'
+},
+{
+    value: 'Georgia',
+    label: 'Georgia'
+},
+{
+    value: 'Germany',
+    label: 'Germany'
+},
+{
+    value: 'Italy',
+    label: 'Italy'
+},
+{
+    value: 'Montenegro',
+    label: 'Montenegro'
+},
+{
+    value: 'Slovenia',
+    label: 'Slovenia'
+},
+{
+    value: 'Sweden',
+    label: 'Sweden'
+},
+{
+    value: 'Switzerland',
+    label: 'Switzerland'
+},
+{
+    value: 'Ukraine',
+    label: 'Ukraine'
+},
+{
+    value: 'UnitedKingdom',
+    label: 'UnitedKingdom'
+}
+]
 class VotingConfirmation extends React.Component{
     constructor (props){
         super(props)
@@ -15,7 +81,7 @@ class VotingConfirmation extends React.Component{
         }
     }
 
-     
+    
 
     render(){
 
@@ -43,12 +109,22 @@ class VotingConfirmation extends React.Component{
                             <TextField 
                                 autoFocus
                                 margin="dense"
+                                select
+                                SelectProps={{
+                                  native: true,
+                                }}
                                 id="name"
-                                label="Participant Code - If you are a spectator use: SPEC"
+                                label="Participant Identifier - If you are a spectator use: Spectator"
                                 fullWidth
                                 type="email"
-                            onChange = {changeId}
-                            />
+                                onChange = {changeId}
+                            >
+                                {peopleIdentifier.map((option) => (
+                                    <option key={option.value} value={option.value}>
+                                    {option.label}
+                                    </option>
+                                ))}
+                            </TextField>
                             </Grid>
                         </Grid>
                         </DialogContent>
