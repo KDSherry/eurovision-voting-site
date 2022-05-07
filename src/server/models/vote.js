@@ -5,7 +5,7 @@ const Schema = mongoose.Schema
 const Vote = new Schema(
     {
         voter: {type: String, required: true},
-        Albania: {type: Number, required:true},
+		Albania: {type: Number, required:true},
 		Armenia: {type: Number, required:true},
 		Austria: {type: Number, required:true},
 		Bulgaria: {type: Number, required:true},

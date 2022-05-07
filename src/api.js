@@ -5,9 +5,11 @@ const api = axios.create({
 })
 
 export const insertVote = payload => api.post(`/vote`, payload)
+export const getAllVotes = () => api.get(`/votes`)
 
 const apis = {
     insertVote,
+    getAllVotes
 }
 
 export default apis
