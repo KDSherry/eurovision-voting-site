@@ -17,6 +17,7 @@ import euro from '../images/BACKDROP.jpg'
 import Title from '../images/Youre_A_Vision_logo_white.png'
 import VotingConfirmation from './VotingConfirmation'
 import api from '../api'
+import { isMobile } from 'react-device-detect';
 
 class VotingPage extends React.Component{
     constructor (props){
@@ -37,21 +38,21 @@ class VotingPage extends React.Component{
                 {"score" :12, "country":""}
             ],
             votes:[
-                {"country":"Albania", "virtualOrder": 12 ,"alphabeticOrder": 1 ,"performer": "Oliver Broad"},
-                {"country":"Armenia" , "virtualOrder": 15 ,"alphabeticOrder": 3 ,"performer": "Emma Plant"},
-                {"country":"Austria" , "virtualOrder": 8 ,"alphabeticOrder": 5 ,"performer": "Dan Gibbons"},
-                {"country":"Bulgaria" , "virtualOrder": 2 ,"alphabeticOrder": 7 ,"performer": "Kevin Hand"},
-                {"country":"Estonia" , "virtualOrder": 7 ,"alphabeticOrder": 9 ,"performer": "Sarah Baldwin"},
-                {"country":"France", "virtualOrder": 14 ,"alphabeticOrder": 11 ,"performer": "Natasha Donald"},
-                {"country":"Georgia"  , "virtualOrder": 1 ,"alphabeticOrder": 13 ,"performer": "Dominic Angadi"},
-                {"country":"Germany", "virtualOrder": 11 ,"alphabeticOrder": 15 ,"performer": "Abbie & Julian"},
-                {"country":"Italy", "virtualOrder": 3 ,"alphabeticOrder": 2 ,"performer": "David Guzman"},
-                {"country":"Montenegro", "virtualOrder": 9 ,"alphabeticOrder": 4 ,"performer": "Matt & Niki"},
-                {"country":"Slovenia", "virtualOrder": 13 ,"alphabeticOrder": 6 ,"performer": "Tommy McDevitt"},
-                {"country":"Sweden", "virtualOrder": 4 ,"alphabeticOrder": 8 ,"performer": "Alice & Adam"},
-                {"country":"Switzerland", "virtualOrder": 5 ,"alphabeticOrder": 10 ,"performer": "Dave & Ruth"},
-                {"country":"Ukraine", "virtualOrder": 6 ,"alphabeticOrder": 12 ,"performer": "Kieran Sherry"},
-                {"country":"United Kingdom", "virtualOrder": 10 ,"alphabeticOrder": 14 ,"performer": "Banham & Dabbs"}
+                {"country":"Albania", "virtualOrder": 12 ,"alphabeticOrder": 1 ,"performer": "Oliver Broad", "mobAlpha": 1, "mobvo": 14},
+                {"country":"Armenia" , "virtualOrder": 15 ,"alphabeticOrder": 3 ,"performer": "Emma Plant", "mobAlpha": 2, "mobvo": 8},
+                {"country":"Austria" , "virtualOrder": 8 ,"alphabeticOrder": 5 ,"performer": "Dan Gibbons", "mobAlpha": 3, "mobvo": 12},
+                {"country":"Bulgaria" , "virtualOrder": 2 ,"alphabeticOrder": 7 ,"performer": "Kevin Hand", "mobAlpha": 4, "mobvo": 9},
+                {"country":"Estonia" , "virtualOrder": 7 ,"alphabeticOrder": 9 ,"performer": "Sarah Baldwin", "mobAlpha": 5, "mobvo": 4},
+                {"country":"France", "virtualOrder": 14 ,"alphabeticOrder": 11 ,"performer": "Natasha Donald", "mobAlpha": 6, "mobvo": 15},
+                {"country":"Georgia"  , "virtualOrder": 1 ,"alphabeticOrder": 13 ,"performer": "Dominic Angadi", "mobAlpha": 7, "mobvo": 1},
+                {"country":"Germany", "virtualOrder": 11 ,"alphabeticOrder": 15 ,"performer": "Abbie & Julian", "mobAlpha": 8, "mobvo": 6},
+                {"country":"Italy", "virtualOrder": 3 ,"alphabeticOrder": 2 ,"performer": "David Guzman", "mobAlpha": 9, "mobvo": 2},
+                {"country":"Montenegro", "virtualOrder": 9 ,"alphabeticOrder": 4 ,"performer": "Matt & Niki", "mobAlpha":10, "mobvo": 5},
+                {"country":"Slovenia", "virtualOrder": 13 ,"alphabeticOrder": 6 ,"performer": "Tommy McDevitt", "mobAlpha":11, "mobvo": 7},
+                {"country":"Sweden", "virtualOrder": 4 ,"alphabeticOrder": 8 ,"performer": "Alice & Adam", "mobAlpha":12, "mobvo": 10},
+                {"country":"Switzerland", "virtualOrder": 5 ,"alphabeticOrder": 10 ,"performer": "Dave & Ruth", "mobAlpha":13, "mobvo": 3},
+                {"country":"Ukraine", "virtualOrder": 6 ,"alphabeticOrder": 12 ,"performer": "Kieran Sherry", "mobAlpha":14, "mobvo": 11},
+                {"country":"United Kingdom", "virtualOrder": 10 ,"alphabeticOrder": 14 ,"performer": "Banham & Dabbs", "mobAlpha":15, "mobvo": 13}
 
             ],
             voteConfirmation:false,
@@ -258,8 +259,11 @@ class VotingPage extends React.Component{
                     
                 </Paper> */}
                 <br/>
-                <Container maxWidth='sm'>
-                    <img src={Title} alt="" style={{marginLeft: "140px",width:'250px', height:'79px'}}/>
+                <Container >
+                    {isMobile? 
+                    <img src={Title} alt="" style={{marginLeft: "15%",width:'250px', height:'80px'}}/>:
+                    <img src={Title} alt="" style={{marginLeft: "40%",width:'250px', height:'80px'}}/>
+                    }
                 </Container>
                 <br/>
                 <ButtonGroup size="small" color="primary" variant="contained" aria-label="large outlined primary button group" fullWidth={true}>

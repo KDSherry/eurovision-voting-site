@@ -3,6 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
+import {isMobile} from 'react-device-detect';
 import NameToImport from './ImageLoader'
 
 class VoteByName extends React.Component{
@@ -39,7 +40,7 @@ class VoteByName extends React.Component{
         let selectOptions = this.returnSelectOptions(name)
 
         return (
-            <Grid item xs={6} key={name}>
+            <Grid item xs={isMobile ? 12 : 6 } key={name}>
                 {/* <Paper style={{textAlign: "center", backgroundColor: "#7ca7f2"}}> */}
                 <Paper style={{textAlign: "center"}}>  
                     <Grid container>
@@ -57,10 +58,16 @@ class VoteByName extends React.Component{
         let array = this.props.votes
         if(this.props.alpha){
             array.sort(function(a, b){
+                if (isMobile) {
+                    return a.mobAlpha - b.mobAlpha
+                }
                 return a.alphabeticOrder - b.alphabeticOrder
             })
         }else{
             array.sort(function(a, b){
+                if (isMobile) {
+                    return a.mobvo - b.mobvo
+                }
                 return a.virtualOrder - b.virtualOrder
             })
         }
@@ -70,6 +77,7 @@ class VoteByName extends React.Component{
             displayCountriesArray.push(this.returnCountry(array[i].country,array[i].performer, array[i].score, array[i].imgsrc))
             
         }
+
         return (
             <Grid container spacing={1}>
                 {displayCountriesArray}
@@ -82,6 +90,7 @@ class VoteByName extends React.Component{
             <div>
                 <br/>
                 {this.positionCountries()}
+                {isMobile? <><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></>:<></>}
             </div>    
         )
     }
